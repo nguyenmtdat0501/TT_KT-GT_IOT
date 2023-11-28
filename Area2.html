@@ -1,0 +1,137 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='css_main.css'/>
+    <link rel="shortcut icon" href="img\logo\Garcia Tavern-logos.jpeg" />
+    <script src="./js/anime.min.js"></script>    
+    <script src="js/intro.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+       <script src="anime.min.js"></script>
+       <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500&family=Nunito:wght@600&family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+    <title> Smart Farm </title>
+</head>
+
+
+<body>
+    <!-- Taskbar -->
+    <div class="task">
+        <ul class="task__left">
+                <li> <a href="Area1.html" class="task__left">AREA 1</a></li>
+                <li> <a href="Area2.html"  class="task__left">AREA 2</a></li>
+                <li></li>
+        </ul>
+        
+        <ul class="task__right">
+            <li class="socialIcon"><a href="https://www.instagram.com/nmtdat23.it/"><i class="bi bi-instagram"></i></a></li>
+            <li class="socialIcon"><a href="https://www.facebook.com/lin.bui.56"><i class="bi bi-facebook"></i></a></li>
+        </ul>
+    </div>
+    <!-- Logo -->
+    <div class="mainlogo">
+            <img  alt="Logo Smart Farm" class="logo" src="Picture/Logo.png" id="introLogo" width="83" height="auto" />
+    </div>
+    <!-- dashboard -->
+    <h1 class="text_name">SMART FARM</h1>
+    <div class="dashboard">
+        <!-- sensor1 -->
+        <div class="sensor_border">
+            <li class="sensor_name">HUMIDITY SOLID</li>
+            <div class="sensor_list">
+                <div class="sensor_control">
+                    <div id="humiditySolid_value">Loading...</div>
+                </div>
+                <div class="namechart">Graph from capturing 12 real data:</div>
+                <div class="sensor_chart_value">
+                    <canvas id="myChart1" style="width:100%;max-width:600px"></canvas>
+                </div>
+                <div class="control">
+                    <div class="img">
+                        <img id="control1" src="Picture/mayBom.png" alt="" class="img_img">
+                    </div>
+                    <div class="menuIntro">   
+                        <input type="checkbox" id="btn1" onchange="toggle1();toggleImage1();" /><label for="btn1">Toggle</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- sensor2 -->
+        <div class="sensor_border">
+            <li class="sensor_name">HUMIDITY AIR</li>
+            <div class="sensor_list">
+                <div class="sensor_control">
+                    <div id="humidityAir_value">Loading...</div>
+                </div>
+                <div class="namechart">Graph from capturing 12 real data:</div>
+                <div class="sensor_chart_value">
+                    <canvas id="myChart2" style="width:100%;max-width:600px"></canvas>
+                </div>
+                <div class="control">
+                    <div class="img">
+                        <img src="Picture/mayPhunSuong.jpg" alt="" class="img_img" id="control2">
+                    </div>
+                    <div class="menuIntro">   
+                        <input type="checkbox" id="btn2" onchange="toggle2();toggleImage2();"/><label for="btn2" >Toggle</label> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- sensor3 -->
+        <div class="sensor_border">
+            <li class="sensor_name">LIGHT</li>
+            <div class="sensor_list">
+                <div class="sensor_control">
+                    <div id="light_value">Loading...</div>
+                </div>
+                <div class="namechart">Graph from capturing 12 real data:</div>
+                <div class="sensor_chart_value">
+                    
+                    <canvas id="myChart3" style="width:100%;max-width:600px"></canvas>
+                </div>
+                <div class="control">
+                    <div class="img">
+                        <img src="Picture/on_den.png" alt="" class="img_img"id="control3">
+                    </div>
+                    <div class="menuIntro">   
+                        <input type="checkbox" id="btn3" onchange="toggle3();toggleImage3();" /><label for="btn3" >Toggle</label> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- sensor4 -->
+        <div class="sensor_border">
+            <li class="sensor_name">TEMPERATURE</li>
+            <div class="sensor_list">
+                <div class="sensor_control">
+                    <div id="temperature_value">Loading...</div>
+                </div>
+                <div class="namechart">Graph from capturing 12 real data:</div>
+                <div class="sensor_chart_value">
+                    <canvas id="myChart4" style="width:100%;max-width:600px"></canvas>
+                </div>
+                <div class="control">
+                    <div class="img">
+                        <img src="Picture/maydieuhoa.jpg" alt="" class="img_img" id="control4">
+                    </div>
+                    <div class="menuIntro">   
+                        <input type="checkbox" id="btn4" onchange="toggle4();toggleImage4();" /><label for="btn4" >Toggle</label> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="footer">&copy;<span id="year"> </span><span> Build by Bui Kha Lin - Nguyen Minh Tien Dat</span></div>
+</body>
+<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
+<script src="function_up2.js"></script>
+</html>
+<script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-database.js"></script>
+
+
